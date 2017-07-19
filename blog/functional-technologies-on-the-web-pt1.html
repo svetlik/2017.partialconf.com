@@ -1,0 +1,183 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="WI9F_89CgcujDanrmDXrbSozmM2JpbjIFcBCAOXQk2g" />    <title>partial :: Conf -> Functional Technologies on the Web, pt. 1</title>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+      <meta property="og:title" content="Functional Technologies on the Web, pt. 1" />
+  <meta property="og:site_name" content="Partial 2017" />
+  <meta property="og:url" content="http://partialconf.com/blog/functional-technologies-on-the-web-pt1.html" />
+  <meta property="og:description" content="Conference about functional technologies on the web. Visit Sofia, Bulgaria on September 22—23, 2017." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://partialconf.com/../images/og_card-fc007957.png" />
+  <meta property="article:published_time" content="2017-05-30T16:12:00Z" />
+
+    <link href="../stylesheets/site-aaceb4ec.css" rel="stylesheet" />
+    <script src="../javascripts/site-774bf1b2.js"></script>
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '111829639415240'); // Insert your pixel ID here.
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111829639415240&ev=PageView&noscript=1"/>
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+  </head>
+  <body class="blog-layout">
+    <script> fbq('track', 'ViewContent', {});</script>
+
+    
+<div class="header-sm fixed">
+  <div class="container">
+    <div class="branding ">
+      <a href="/" class="logo logo-sm">partial :: Conf 2017</a>
+    </div>
+
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/venue">Venue</a>
+      <a href="/partners">Partners</a>
+      <a href="/tickets" class="btn-primary btn-invert btn-sm">Tickets</a>
+    </nav>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="post-header">
+        <h1>Functional Technologies on the Web, pt. 1</h1>
+        <div class="post-meta">
+          Posted on <time>May 30, 2017</time>
+        </div>
+      </div>
+
+      <div class="content">
+        <p>In recent years the functional approach have been front and central with the rise of real-time UIs, cloud computing and distributed systems. Functional technologies provide a lot of solutions that can help with these challenges, but with so many choices it’s usually difficult to decide where to start first, or go next.</p>
+
+<p>We <a href="https://medium.com/@partialconf/announcement-2335684ba05d">started</a> Partial as a platform for exchanging knowledge and ideas. Our main goal is this new conference to become an annual gathering for the curious to learn, teach, and share.</p>
+
+<p>This is Part 1 of our attempt at collecting an overview of the functional technologies used on the web. This is what <strong>Partial</strong> is all about. Stay tuned for more!</p>
+
+<h2><a href="https://www.haskell.org">Haskell</a></h2>
+
+<p>When we talk whatever functional, Haskell is the very first language we think of. From high order functions, to one of the most interesting type system out there, to the seldom understood monads, translated to every language out there without native support for them. It’s a helluva language where one can always learn something new.</p>
+
+<p>The basis of what would become Haskell was outlined in 1987 at The Conference for Functional Programming Languages and Computer Architecture (Wow!). A lot of people were getting excited for the so-called “lazy functional languages”, so a committee was formed to collect the best ideas and implement them in a standard.</p>
+
+<p>It wasn’t until 1990, when v1.0 of Haskell was released. In 1999, “The Haskell 98 Report“ defined the first stable and portable implementation of the language for teaching and experimenting. Improvements upon the design and the standard library brought to us Haskell 2010, which is the current implementation people around the world use.</p>
+
+<p>Here’s a basic Hello World example in Haskell:</p>
+<div class="highlight"><pre class="highlight haskell"><code><span class="kr">module</span> <span class="nn">Main</span> <span class="kr">where</span>
+
+<span class="n">main</span> <span class="o">::</span> <span class="kt">IO</span> <span class="nb">()</span>
+<span class="n">main</span> <span class="o">=</span> <span class="n">putStrLn</span> <span class="s">"Hello Partial!"</span>
+</code></pre></div>
+<p>There’s a great paper telling the history of Haskell, so if you are curious to learn more about the origins of this influential wizardry here’s <a href="https://www.microsoft.com/en-us/research/wp-content/uploads/2016/07/history.pdf?from=http%3A%2F%2Fresearch.microsoft.com%2F%7Esimonpj%2Fpapers%2Fhistory-of-haskell%2Fhistory.pdf">a document</a> telling the story.</p>
+
+<p><em>Are you interested in sharing your experience with Haskell? Come to Sofia and tell us all about it! <a href="https://goo.gl/qGfmds">Apply for a talk</a>.</em></p>
+
+<h2><a href="https://www.scala-lang.org">Scala</a></h2>
+
+<p>For all of you Java folks, there is a language with a fancy type system, OOP and strong functional influence.</p>
+
+<p>Everything started with Funnel, a minimalistic programming language for functional nets. It was the first exploration of Martin Odersky to create a language, that combines the best practices of Object Oriented Programming and features from functional languages.</p>
+
+<p>Soon after that, in 2001 Martin started working on Scala. The first version was released in 2003 and the rest, as they say, is history. Scala is part of the JVM ecosystem, so it has built-in interoperability with Java libraries and tooling.</p>
+
+<p>Here’s Hello World in Scala:</p>
+<div class="highlight"><pre class="highlight scala"><code><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="k">extends</span> <span class="nc">Application</span> <span class="o">{</span>
+  <span class="nc">Console</span><span class="o">.</span><span class="n">println</span><span class="o">(</span><span class="s">"Hello Partial!"</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div>
+<p>Did you know there’s a <a href="https://www.scala-js.org">Scala implementation in JavaScript</a>, making it possible to write Scala programs that can run in your browser?</p>
+
+<p><em>If you are interested in presenting about Scala – <a href="https://goo.gl/qGfmds">apply for a talk</a> on our Call for speakers.</em></p>
+
+<h2><a href="http://fsharp.org">F# (F Sharp)</a></h2>
+
+<p>F# started as a port of OCaml on the .NET platform. It was designed as a strongly-typed functional language with built-in concurrency and metaprogramming features.</p>
+
+<p>Its origins date back to 1998, when Don Syme joined Microsoft Research’s group in programming languages.</p>
+
+<blockquote>
+<p>“I joined the team and then other 10 of us joined the team, we were approached by a guy called James Plamondon, who started the project called Project 7, which was about getting 7 academic and 7 industrial programming languages on each side to target the .NET common language runtime and really check out if it was good enough”.</p>
+</blockquote>
+
+<p><em>Don Syme, <a href="https://www.infoq.com/interviews/F-Sharp-Don-Syme">source</a></em></p>
+
+<p>The first stable version of F# was released in May 2005, and as of 2010 it is available on Linux, macOS and Windows. It is widely used for mobile development, game development and GPU programming.</p>
+
+<p>As for the web – <a href="http://websharper.com">WebSharper</a> is the most popular web framework for F#. It brings reactive programming to the .NET platform and can be run in the browser thanks to <a href="http://fable.io">Fable</a>.</p>
+
+<p>The development of the language is backed by the F# Software Foundation and Microsoft is the largest contributor.</p>
+
+<p>Here’s Hello World in F#:</p>
+<div class="highlight"><pre class="highlight fsharp"><code><span class="k">open</span> <span class="nc">System</span>
+<span class="nn">Console</span><span class="p">.</span><span class="nc">WriteLine</span><span class="p">(</span><span class="s2">"Hello Partial!"</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Do you run on the .NET platform? If yes, then F# is something we are really excited to talk at Partial – <a href="https://goo.gl/qGfmds">send a proposal for talk</a>.</em></p>
+
+<p>—</p>
+
+<p>Thats it for part one, next week we will talk about the origins of Erlang, Elixir and Elm. <a href="http://twitter.com/partialconf">Follow us on Twitter</a>, or <a href="http://partialconf.com/#subscribe">subscribe to the newsletter</a> for more news about the conference.</p>
+
+<p>Have you considered applying for our Call for Speakers? It is <strong>open until 16th of June</strong>, so if you want to tell us more about Haskell, Scala, F# or anything else lambda – you can become a Partial speaker by submitting your talk.</p>
+
+<p><br />
+<a href="https://goo.gl/qGfmds" class="btn-success">Become a speaker</a></p>
+
+      </div>
+    </div>
+
+    <div class="footer dark">
+  <div class="container">
+    <div class="row">
+      <div class="branding">
+        <a href="#" class="logo logo-sm">partial :: Conf 2017</a><br />
+        <small>22–23 September, Sofia</small>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <a href="https://medium.com/@partialconf">@medium</a><br>
+        <a href="https://twitter.com/partialconf">@twitter</a><br>
+        <a href="https://fb.me/partialconf">@facebook</a><br>
+        <a href="https://github.com/partialconf">@github</a>
+      </div>
+
+      <div class="col">
+        <h4>Information</h4>
+
+        <a href="mailto:hi@partialconf.com">→ Contact</a><br>
+        <a href="/legal">→ Legal</a><br>
+        <a href="http://berlincodeofconduct.org">→ Conduct</a><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99975926-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>

@@ -1,0 +1,200 @@
+<!doctype html>
+<html prefix="og: http://ogp.me/ns#">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-site-verification" content="WI9F_89CgcujDanrmDXrbSozmM2JpbjIFcBCAOXQk2g" />    <title>partial :: Conf -> Functional Technologies on the Web, pt. 2</title>
+
+    <link rel="shortcut icon" href="../favicon.ico">
+
+      <meta property="og:title" content="Functional Technologies on the Web, pt. 2" />
+  <meta property="og:site_name" content="Partial 2017" />
+  <meta property="og:url" content="http://partialconf.com/blog/functional-technologies-on-the-web-pt2.html" />
+  <meta property="og:description" content="Conference about functional technologies on the web. Visit Sofia, Bulgaria on September 22—23, 2017." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://partialconf.com/../images/og_card-fc007957.png" />
+  <meta property="article:published_time" content="2017-06-06T11:29:00Z" />
+
+    <link href="../stylesheets/site-aaceb4ec.css" rel="stylesheet" />
+    <script src="../javascripts/site-774bf1b2.js"></script>
+    <!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '111829639415240'); // Insert your pixel ID here.
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111829639415240&ev=PageView&noscript=1"/>
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+  </head>
+  <body class="blog-layout">
+    <script> fbq('track', 'ViewContent', {});</script>
+
+    
+<div class="header-sm fixed">
+  <div class="container">
+    <div class="branding ">
+      <a href="/" class="logo logo-sm">partial :: Conf 2017</a>
+    </div>
+
+    <nav>
+      <a href="/blog">Blog</a>
+      <a href="/venue">Venue</a>
+      <a href="/partners">Partners</a>
+      <a href="/tickets" class="btn-primary btn-invert btn-sm">Tickets</a>
+    </nav>
+  </div>
+</div>
+
+
+    <div class="container">
+      <div class="post-header">
+        <h1>Functional Technologies on the Web, pt. 2</h1>
+        <div class="post-meta">
+          Posted on <time>June  6, 2017</time>
+        </div>
+      </div>
+
+      <div class="content">
+        <p>Last week we <a href="http://partialconf.com/blog/functional-technologies-on-the-web-pt1">covered</a> the origins of Haskell, Scala and F#.</p>
+
+<p>Today we continue with part 2 of our overview of functional technologies.</p>
+
+<h2><a href="https://www.erlang.org/">Erlang</a></h2>
+
+<p>Let&rsquo;s start this one with a short, but inspirational video:</p>
+
+<div class="video-container">
+    <iframe width="980" height="551" src="https://www.youtube.com/embed/uKfKtXYLG78" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<p>Erlang was devised to improve the development of telephony related software in the labs of Ericsson in 1982. The very first versions were implemented in Prolog, but the need for better performance pushed engineers from Ericsson to start a complete rewrite by 1992. This brought the BEAM virtual machine, the heart of modern Erlang and, of course, the main driving force behind Elixir.</p>
+
+<p>Up until the late 90’s Erlang was with a closed source, but Ericsson recognised that in order to grow its popularity they need to share it with the community.</p>
+
+<p>Fun fact: Erlang is named after danish mathematician and engineer <a href="https://en.wikipedia.org/wiki/Agner_Krarup_Erlang">Agner Krarup Erlang</a></p>
+
+<p>Here’s the vision for language, as outlined by Joe Armstrong, Erlang’s co-inventor:</p>
+
+<ul>
+<li>Everything is a process.</li>
+<li>Processes are strongly isolated.</li>
+<li>Process creation and destruction is a lightweight operation.</li>
+<li>Message passing is the only way for processes to interact.</li>
+<li>Processes have unique names.</li>
+<li>If you know the name of a process you can send it a message.</li>
+<li>Processes share no resources.</li>
+<li>Error handling is non-local.</li>
+<li>Processes do what they are supposed to do or fail.</li>
+</ul>
+
+<p>Or simply put: <a href="https://www.youtube.com/watch?v=u41GEwIq2mE&amp;t=3m59s">“If Java is &lsquo;write once, run anywhere&rsquo;, then Erlang is &lsquo;write once, run forever&rsquo;.”</a></p>
+
+<p>Here&rsquo;s what Erlang looks like:</p>
+<div class="highlight"><pre class="highlight erlang"><code><span class="p">-</span><span class="ni">module</span><span class="p">(</span><span class="n">hello</span><span class="p">).</span>
+<span class="p">-</span><span class="ni">export</span><span class="p">([</span><span class="n">hello_world</span><span class="o">/</span><span class="mi">0</span><span class="p">]).</span>
+
+<span class="nf">hello_world</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="nn">io</span><span class="p">:</span><span class="nf">fwrite</span><span class="p">(</span><span class="s">"Hello, Partial</span><span class="se">\n</span><span class="s">"</span><span class="p">).</span>
+</code></pre></div>
+<p><em>If you use Erlang for your projects, Partial is an opportunity to share your experience with others. <a href="https://goo.gl/qGfmds">Apply</a> for an Erlang talk!</em></p>
+
+<h2><a href="https://elixir-lang.org">Elixir</a></h2>
+
+<p>Speaking of Erlang and BEAM, there’s no way we can skip Elixir. For the past 6 years it grew in popularity and many developers started experimenting with it.</p>
+
+<p>Elixir was created as a side project by José Valim, a respected Ruby and Rails contributor.</p>
+
+<p>Everything in Elixir is an expression, it features a dynamic dispatch approach to polymorphism and it is really, really fast. Even if you don’t use it for parallel programming, it can handle millions of connections, thanks to its smart design and the use of battle tested Erlang tricks.</p>
+
+<p>Having features like pattern matching, meta programming, lightweight multithreading, developer-friendly syntax and tight integration with OTP, Erlang tooling, Elixir is becoming more and more popular every year.</p>
+
+<p>A simple Hello World in Elixir:</p>
+<div class="highlight"><pre class="highlight elixir"><code><span class="no">IO</span><span class="o">.</span><span class="n">puts</span> <span class="sd">"</span><span class="s2">Hello Partial!"</span>
+</code></pre></div>
+<p>At Partial, we’ll be covering Elixir with speakers like Saša Jurić (author of “Elxir in action”) and Michał Muskała (core member of the Ecto team).</p>
+
+<p><em>If you want to delve deeper and learn more about Elixir – be sure to <a href="http://partialconf.com/tickets">get your ticket for Partial</a> today!</em></p>
+
+<h2><a href="http://elm-lang.org">Elm</a></h2>
+
+<p>Developers familiar with React, Redux and other popular web UI technologies will appreciate the simplicity of Elm. It’s a safe and fun way of building interfaces in the browser.</p>
+
+<p>Elm was created by Evan Czaplicki for <a href="http://elm-lang.org/assets/papers/concurrent-frp.pdf">his thesis</a> in 2012. The compiler is written in Haskell, and it’s a complete package – it has built-in REPL, dependency manager, debugger and libraries to manipulate the DOM. This means that you can quickly start developing your idea, without doing a tedious initial setup.</p>
+
+<p>Each Elm program is separated in three main parts:</p>
+
+<ul>
+<li>Model - it holds the state of the application</li>
+<li>Update - how you update your state</li>
+<li>View - declarative representation of your interface</li>
+</ul>
+
+<p>Thanks to its focus on immutability and static types it helps developers in creating easy to maintain code and there’s practically no way you can ship broken code due to the strictness of its compiler. Another great thing about Elm is the helpful error reporting – every exception is accompanied with the most important details + documentation and links to online resources.</p>
+
+<p>This is a basic Hello World module in Elm:</p>
+<div class="highlight"><pre class="highlight plaintext"><code>module Hello exposing (..)
+
+import Html exposing (text)
+
+main =
+    text "Hello Partial"
+</code></pre></div>
+<p>In September <a href="https://blog.ilias.xyz">Ilias Van Peer</a> will talk more about Elm at the first edition of Partial.</p>
+
+<p><em>If you have a project written in Elm, and you want to present it to other developers – consider <a href="https://goo.gl/qGfmds">applying for a talk</a> at Partial.</em></p>
+
+<p>—</p>
+
+<p>This the end of part 2, next week we’ll cover React and Clojure. For more news about the conference <a href="http://twitter.com/partialconf">follow us on Twitter</a>, or <a href="http://partialconf.com/#subscribe">subscribe to the newsletter</a>.</p>
+
+      </div>
+    </div>
+
+    <div class="footer dark">
+  <div class="container">
+    <div class="row">
+      <div class="branding">
+        <a href="#" class="logo logo-sm">partial :: Conf 2017</a><br />
+        <small>22–23 September, Sofia</small>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">
+        <a href="https://medium.com/@partialconf">@medium</a><br>
+        <a href="https://twitter.com/partialconf">@twitter</a><br>
+        <a href="https://fb.me/partialconf">@facebook</a><br>
+        <a href="https://github.com/partialconf">@github</a>
+      </div>
+
+      <div class="col">
+        <h4>Information</h4>
+
+        <a href="mailto:hi@partialconf.com">→ Contact</a><br>
+        <a href="/legal">→ Legal</a><br>
+        <a href="http://berlincodeofconduct.org">→ Conduct</a><br>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-99975926-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+  </body>
+</html>
